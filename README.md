@@ -1,5 +1,11 @@
 # Online Material for VaMoS 2020
 
+You can find the *CPR2FC* algorithm in the `FCI.java` and the *FC2SI* algorithm in the `SIModel.java` file.
+
+## Build and Test
+
+The code can be build with *Maven* by running `mvn clean install` with compiles the code and runs four test cases that create a file with a superimposed Product-Process-Resource model.
+
 ## PPR CPR Definition in BNF
 
 ```
