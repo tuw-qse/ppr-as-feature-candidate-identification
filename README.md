@@ -10,10 +10,10 @@ The code can be build with *Maven* by running `mvn clean install` with compiles 
 
 ```
 <model>        ::= *<ppr-cpr>
-<ppr-cpr>      ::= <process> | <input2output> | <resource>
-<process>      ::= "('" <process-name> "','" <outputproduct-name> "')"
-<input2output> ::= "('" <inputproduct-name> "','" <outputproduct-name> "')"
-<resource>     ::= "('" <resource-name> "','" <process-name> "','" <inputproduct-name> "')"
+<ppr-cpr>      ::= "('" <process> | <input2output> | <resource> "')"
+<process>      ::= <process-name> "','" <outputproduct-name>
+<input2output> ::= <inputproduct-name> "','" <outputproduct-name>
+<resource>     ::= <resource-name> "','" <process-name> "','" <inputproduct-name>
 <process-name> ::= <text>
 <outputproduct-name> ::= <text>
 <inputproduct-name>  ::= <text>
