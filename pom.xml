@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>at.sqi</groupId>
+  <artifactId>ppr-fci</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+
+  <name>PPR-SQI</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+	<!-- base settings -->
+	<gpg.useagent>true</gpg.useagent>
+	<jdk.version>1.8</jdk.version>
+	<mvn.version>3</mvn.version>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	
+	<!-- maven plugins -->
+	<mvn.compiler.plugin.version>3.2</mvn.compiler.plugin.version>
+	<mvn.clean.plugin.version>2.6.1</mvn.clean.plugin.version>
+	<mvn.buildhelper.plugin.version>1.9.1</mvn.buildhelper.plugin.version>
+	<junit.version>4.12</junit.version>
+	<jgrapht.version>1.3.0</jgrapht.version>
+  </properties>
+
+   <build>
+       <plugins>
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-compiler-plugin</artifactId>
+               <version>${mvn.compiler.plugin.version}</version>
+               <configuration>
+                   <source>${jdk.version}</source>
+                   <target>${jdk.version}</target>
+                   <fork>true</fork>
+                   <showDeprecation>true</showDeprecation>
+                   <showWarnings>true</showWarnings>
+                   <compilerArgs>
+                       <arg>-Xlint</arg>
+                   </compilerArgs>
+               </configuration>
+           </plugin>
+       </plugins>
+   </build>
+
+  <dependencies>
+  	<dependency>
+  	  <groupId>org.jgrapht</groupId>
+	  <artifactId>jgrapht-core</artifactId>
+	  <version>${jgrapht.version}</version>
+  	</dependency>
+  	<dependency>
+  	  <groupId>org.jgrapht</groupId>
+	  <artifactId>jgrapht-io</artifactId>
+	  <version>${jgrapht.version}</version>
+  	</dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
